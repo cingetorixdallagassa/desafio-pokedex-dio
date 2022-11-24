@@ -10,17 +10,25 @@ function convertPokemonToLi(pokemon) {
         <li class="pokemon ${pokemon.type}">
             <span class="number">#${pokemon.number}</span>
             <span class="name">${pokemon.name}</span>
+        
 
             <div class="detail">
+           
                 <ol class="types">
                     ${pokemon.types.map((type) => `<li class="type ${type}">${type}</li>`).join('')}
+                    <li class="weight">Weight:${pokemon.weight}</li>
+                    <li class="weight">Height:${pokemon.height}</li>
+                    <li class="weight">Base experience:${pokemon.base_experience}</li>
                 </ol>
-
+            
                 <img src="${pokemon.photo}"
                      alt="${pokemon.name}">
+                
             </div>
-        </li>
+           
+        </div>
     `
+    
 }
 
 function loadPokemonItens(offset, limit) {
